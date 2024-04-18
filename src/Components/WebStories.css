@@ -1,0 +1,84 @@
+/* WebStories.css */
+.web-stories-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.web-stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.story-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.story-card a {
+    color: white;
+    text-decoration: none;
+}
+
+.story-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.story-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.story-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.story-date {
+    padding: 10px;
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+    background-color: #000;
+}
+
+.view-more {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.view-more button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+}
+
+.no-stories {
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) { /* For tablets */
+    .web-stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) { /* For mobile */
+    .web-stories-grid {
+        grid-template-columns: 1fr;
+    }
+}
